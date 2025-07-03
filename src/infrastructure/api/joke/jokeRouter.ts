@@ -21,6 +21,13 @@ jokeRegistry.registerPath({
 	method: "get",
 	path: "/joke",
 	tags: ["Joke"],
+	responses: createApiResponse(JokeSchema, "Success"),
+});
+
+jokeRegistry.registerPath({
+	method: "get",
+	path: "/jokes",
+	tags: ["Joke"],
 	responses: createApiResponse(z.array(JokeSchema), "Success"),
 });
 
@@ -29,6 +36,30 @@ jokeRegistry.registerPath({
 	path: "/joke/{source}",
 	tags: ["Joke"],
 	request: { params: GetJokeSchema.shape.params },
+	responses: createApiResponse(JokeSchema, "Success"),
+});
+
+jokeRegistry.registerPath({
+	method: "post",
+	path: "/joke",
+	tags: ["Joke"],
+	request: { params: PostJokeSchema.shape.query },
+	responses: createApiResponse(JokeSchema, "Success"),
+});
+
+jokeRegistry.registerPath({
+	method: "put",
+	path: "/joke",
+	tags: ["Joke"],
+	request: { params: UpdateJokeSchema.shape.query },
+	responses: createApiResponse(JokeSchema, "Success"),
+});
+
+jokeRegistry.registerPath({
+	method: "delete",
+	path: "/joke",
+	tags: ["Joke"],
+	request: { params: DeleteJokeSchema.shape.query },
 	responses: createApiResponse(JokeSchema, "Success"),
 });
 

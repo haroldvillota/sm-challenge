@@ -65,7 +65,92 @@ npm start
 
 ## Endpoints Disponibles
 
-### 1. Cálculo de MCM
+### Módulo de Chistes (`/joke`)
+
+#### 1. Obtener chiste aleatorio
+**Endpoint:** `GET /joke`  
+**Descripción:** Devuelve un chiste aleatorio de cualquier fuente disponible  
+**Respuesta exitosa (200):**
+```json
+{
+  "value": "Chiste aleatorio",
+  "source": "random"
+}
+```
+
+#### 2. Obtener chiste por fuente específica
+**Endpoint:** `GET /joke/:source`  
+**Parámetros:**
+- `source`: Fuente del chiste (`chuck` o `dad`)
+
+**Respuesta exitosa (200):**
+```json
+{
+  "value": "Chiste específico de la fuente solicitada",
+  "source": "chuck|dad"
+}
+```
+
+**Respuesta de error (400):**
+```json
+{
+  "errors": [
+    {
+      "message": "Invalid source parameter"
+    }
+  ]
+}
+```
+
+#### 3. Crear nuevo chiste
+**Endpoint:** `POST /joke`  
+**Body:**
+```json
+{
+  "value": "Texto del nuevo chiste"
+}
+```
+
+**Respuesta exitosa (201):**
+```json
+{
+  "id": 123,
+  "value": "Texto del nuevo chiste",
+  "createdAt": "2023-05-20T12:00:00Z"
+}
+```
+
+#### 4. Actualizar chiste existente
+**Endpoint:** `PUT /joke`  
+**Parámetros query:**
+- `number`: ID del chiste a actualizar
+- `value`: Nuevo texto del chiste
+
+**Respuesta exitosa (200):**
+```json
+{
+  "id": 123,
+  "value": "Texto actualizado del chiste",
+  "updatedAt": "2023-05-20T12:05:00Z"
+}
+```
+
+#### 5. Eliminar chiste
+**Endpoint:** `DELETE /joke`  
+**Parámetro query:**
+- `number`: ID del chiste a eliminar
+
+**Respuesta exitosa (200):**
+```json
+{
+  "success": true,
+  "message": "Joke deleted successfully"
+}
+```
+
+### Módulo de matemáticas (`/math`)
+
+#### 1. Cálculo de MCM
 
 **Endpoint:** `GET /mcm`
 
@@ -86,7 +171,7 @@ GET /mcm?numbers=4,6,8
 }
 ```
 
-### 2. Incrementar número
+#### 2. Incrementar número
 
 **Endpoint:** `GET /increment`
 
@@ -105,6 +190,46 @@ GET /increment?number=5
   "message": "Number incremented successfully",
   "data": 6
 }
+```
+
+
+## Ejemplos de Uso
+
+### Obtener chiste aleatorio
+```bash
+curl -X GET http://localhost:8080/joke
+```
+
+### Obtener chiste de Chuck Norris
+```bash
+curl -X GET http://localhost:8080/joke/chuck
+```
+
+### Crear nuevo chiste
+```bash
+curl -X POST http://localhost:8080/joke \
+  -H "Content-Type: application/json" \
+  -d '{"value":"¿Qué hace un libro de matemáticas en la playa? Se hace una integral"}'
+```
+
+### Actualizar chiste
+```bash
+curl -X PUT "http://localhost:8080/joke?number=123&value=Nuevo%20texto%20del%20chiste"
+```
+
+### Eliminar chiste
+```bash
+curl -X DELETE "http://localhost:8080/joke?number=123"
+```
+
+### Calcular Máximo común múltiplo
+```bash
+curl -X GET "http://localhost:8080/math/mcm?numbers=5,2,7"
+```
+
+### Incrementar en uno
+```bash
+curl -X GET "http://localhost:8080/math/increment?number=100"
 ```
 
 
