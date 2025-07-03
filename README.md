@@ -1,0 +1,192 @@
+# README - Squadmakers Challenge for Backend - LLM Engineer
+
+## Descripción
+
+## Modulo chistes
+
+Obtiene chistes aleatorios de:
+
+1. API de Chuck Norris (https://api.chucknorris.io)
+2. API de Dad Jokes (https://icanhazdadjoke.com/api)
+
+CRUD completo para gestión de chistes locales
+
+## Modulo matemático
+
+Esta API proporciona servicios matemáticos básicos a través de endpoints RESTful. Actualmente incluye funcionalidades para:
+
+1. Calcular el Mínimo Común Múltiplo (MCM) de una lista de números
+2. Incrementar un número en 1
+
+La API está construida con Node.js, Express, TypeScript y sigue buenas prácticas de desarrollo como separación de responsabilidades, validación de entradas y manejo adecuado de errores.
+
+## Requisitos
+
+- Node.js (v16 o superior)
+- npm o yarn
+- TypeScript
+- Base de datos SQL (configurable) Listo para PostresQL
+
+## Instalación
+
+1. Clonar el repositorio:
+   ```bash
+   git clone [url-del-repositorio]
+   ```
+
+2. Instalar dependencias:
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
+
+3. Configurar variables de entorno (si aplica):
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Compilar TypeScript:
+   ```bash
+   npm run build
+   ```
+
+## Ejecución
+
+Para iniciar el servidor en modo desarrollo:
+```bash
+npm run dev
+```
+
+Para producción:
+```bash
+npm start
+```
+
+## Endpoints Disponibles
+
+### 1. Cálculo de MCM
+
+**Endpoint:** `GET /mcm`
+
+**Parámetro:**
+- `numbers`: Lista de números enteros positivos separados por comas
+
+**Ejemplo:**
+```bash
+GET /mcm?numbers=4,6,8
+```
+
+**Respuesta exitosa:**
+```json
+{
+  "success": true,
+  "message": "MCM calculated successfully",
+  "data": 24
+}
+```
+
+### 2. Incrementar número
+
+**Endpoint:** `GET /increment`
+
+**Parámetro:**
+- `number`: Número entero positivo a incrementar
+
+**Ejemplo:**
+```bash
+GET /increment?number=5
+```
+
+**Respuesta exitosa:**
+```json
+{
+  "success": true,
+  "message": "Number incremented successfully",
+  "data": 6
+}
+```
+
+
+## Pruebas
+
+El proyecto incluye pruebas unitarias e integrales usando Vitest y Supertest.
+
+Para ejecutar las pruebas:
+```bash
+npm test
+```
+
+Para cobertura de pruebas:
+```bash
+npm run test:coverage
+```
+
+## Documentación API
+
+La documentación OpenAPI/Swagger está disponible en `/api-docs` cuando el servidor está en ejecución.
+
+## Variables de Entorno Actualizadas
+
+### Configuración del Servidor
+
+- `NODE_ENV`: Entorno de ejecución (opciones: `development`, `production`)
+  ```env
+  NODE_ENV="development"
+  ```
+
+- `PORT`: Puerto donde se ejecutará la aplicación
+  ```env
+  PORT="8080"
+  ```
+
+- `HOST`: Hostname del servidor
+  ```env
+  HOST="localhost"
+  ```
+
+### Configuración CORS
+
+- `CORS_ORIGIN`: Orígenes permitidos para CORS (usar `*` para desarrollo)
+  ```env
+  CORS_ORIGIN="http://localhost:*"
+  ```
+
+### Limitación de Tasa (Rate Limiting)
+
+- `COMMON_RATE_LIMIT_WINDOW_MS`: Ventana de tiempo para limitación de tasa en milisegundos
+  ```env
+  COMMON_RATE_LIMIT_WINDOW_MS="1000"
+  ```
+
+- `COMMON_RATE_LIMIT_MAX_REQUESTS`: Máximo número de peticiones por ventana de tiempo por IP
+  ```env
+  COMMON_RATE_LIMIT_MAX_REQUESTS="20"
+  ```
+
+### Configuración de Base de Datos
+
+- `DB_USER`: Usuario de la base de datos
+  ```env
+  DB_USER="myLocalUser"
+  ```
+
+- `DB_HOST`: Host de la base de datos
+  ```env
+  DB_HOST="localhost"
+  ```
+
+- `DB_NAME`: Nombre de la base de datos
+  ```env
+  DB_NAME="myLocalDb"
+  ```
+
+- `DB_PASSWORD`: Contraseña de la base de datos
+  ```env
+  DB_PASSWORD="myLocalPassword"
+  ```
+
+- `DB_PORT`: Puerto de la base de datos
+  ```env
+  DB_PORT="5432"
+  ```
