@@ -67,7 +67,7 @@ npm start
 
 ## Endpoints Disponibles
 
-### Módulo de Chistes (`/joke`)
+### Módulo de Chistes 
 
 #### 1. Obtener chiste aleatorio
 **Endpoint:** `GET /joke`  
@@ -75,8 +75,14 @@ npm start
 **Respuesta exitosa (200):**
 ```json
 {
-  "value": "Chiste aleatorio",
-  "source": "random"
+  "success": true,
+  "message": "Joke found",
+  "responseObject": {
+      "id": "F6wPR71Dtzd",
+      "value": "I’m reading a book on the history of glue – can’t put it down.",
+      "source": "dad"
+  },
+  "statusCode": 200
 }
 ```
 
@@ -88,37 +94,34 @@ npm start
 **Respuesta exitosa (200):**
 ```json
 {
-  "value": "Chiste específico de la fuente solicitada",
-  "source": "chuck|dad"
+  "success": true,
+  "message": "Joke found",
+  "responseObject": {
+      "id": "klsQdtvISrmCKTQIRig9gQ",
+      "value": "Chuck Norris can sing bohemian rhapsody with his farts.",
+      "source": "chuck"
+  },
+  "statusCode": 200
 }
 ```
 
-**Respuesta de error (400):**
-```json
-{
-  "errors": [
-    {
-      "message": "Invalid source parameter"
-    }
-  ]
-}
-```
 
 #### 3. Crear nuevo chiste
 **Endpoint:** `POST /joke`  
-**Body:**
-```json
-{
-  "value": "Texto del nuevo chiste"
-}
-```
+**Parámetros:**
+- `value`: Texto del chiste
 
 **Respuesta exitosa (201):**
 ```json
 {
-  "id": 123,
-  "value": "Texto del nuevo chiste",
-  "createdAt": "2023-05-20T12:00:00Z"
+  "success": true,
+    "message": "Created Joke",
+    "responseObject": {
+        "id": 4,
+        "value": "¿Cuántos programadores se necesitan para cambiar una bombilla? Ninguno, ¡eso es un problema de hardware!",
+        "source": null
+    },
+    "statusCode": 200
 }
 ```
 
@@ -131,9 +134,14 @@ npm start
 **Respuesta exitosa (200):**
 ```json
 {
-  "id": 123,
-  "value": "Texto actualizado del chiste",
-  "updatedAt": "2023-05-20T12:05:00Z"
+  "success": true,
+    "message": "Updated Joke",
+    "responseObject": {
+        "id": 3,
+        "value": "Nuevo chiste",
+        "source": null
+    },
+    "statusCode": 200
 }
 ```
 
@@ -146,11 +154,31 @@ npm start
 ```json
 {
   "success": true,
-  "message": "Joke deleted successfully"
+  "message": "Joke deleted successfully",
+  "statusCode": 200,
 }
 ```
 
-#### 6. Combinar chiste
+#### 6. Ver los chistes almacenados
+**Endpoint:** `GET /jokes`  
+**Descripción:** Devuelve los chistes almacenados en la base de datos
+**Respuesta exitosa (200):**
+```json
+{
+  "success": true,
+  "message": "Jokes",
+  "statusCode": 200,
+  "responseObject": [
+    {
+        "id": 1,
+        "value": "¿Cuántos programadores se necesitan para cambiar una bombilla? Ninguno, ¡eso es un problema de hardware!"
+    },
+    ...
+  ]
+}
+```
+
+#### 7. Combinar chiste
 
 **Endpoint:** `GET /jokes/combined`  
 **Descripción:** Obtiene 5 pares de chistes combinados (Chuck Norris + Dad Joke)
@@ -159,7 +187,8 @@ npm start
 {
   "success": true,
   "message": "Combined jokes retrieved successfully",
-  "data": [
+  "statusCode": 200,
+  "responseObject": [
     {
       "chuck": "Chuck Norris can divide by zero.",
       "dad": "Why don't scientists trust atoms? Because they make up everything.",
@@ -189,7 +218,8 @@ GET /mcm?numbers=4,6,8
 {
   "success": true,
   "message": "MCM calculated successfully",
-  "data": 24
+  "responseObject": 70,
+  "statusCode": 200
 }
 ```
 
@@ -210,7 +240,8 @@ GET /increment?number=5
 {
   "success": true,
   "message": "Number incremented successfully",
-  "data": 6
+  "responseObject": 21,
+  "statusCode": 200
 }
 ```
 
