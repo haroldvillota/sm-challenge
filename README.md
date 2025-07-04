@@ -70,9 +70,13 @@ npm start
 ### Módulo de Chistes 
 
 #### 1. Obtener chiste aleatorio
+
 **Endpoint:** `GET /joke`  
+
 **Descripción:** Devuelve un chiste aleatorio de cualquier fuente disponible  
+
 **Respuesta exitosa (200):**
+
 ```json
 {
   "success": true,
@@ -87,11 +91,15 @@ npm start
 ```
 
 #### 2. Obtener chiste por fuente específica
+
 **Endpoint:** `GET /joke/:source`  
+
 **Parámetros:**
+
 - `source`: Fuente del chiste (`chuck` o `dad`)
 
 **Respuesta exitosa (200):**
+
 ```json
 {
   "success": true,
@@ -107,8 +115,11 @@ npm start
 
 
 #### 3. Crear nuevo chiste
+
 **Endpoint:** `POST /joke`  
+
 **Parámetros:**
+
 - `value`: Texto del chiste
 
 **Respuesta exitosa (201):**
@@ -126,12 +137,16 @@ npm start
 ```
 
 #### 4. Actualizar chiste existente
+
 **Endpoint:** `PUT /joke`  
+
 **Parámetros query:**
+
 - `number`: ID del chiste a actualizar
 - `value`: Nuevo texto del chiste
 
 **Respuesta exitosa (200):**
+
 ```json
 {
   "success": true,
@@ -146,11 +161,15 @@ npm start
 ```
 
 #### 5. Eliminar chiste
-**Endpoint:** `DELETE /joke`  
+
+**Endpoint:** `DELETE /joke` 
+
 **Parámetro query:**
+
 - `number`: ID del chiste a eliminar
 
 **Respuesta exitosa (200):**
+
 ```json
 {
   "success": true,
@@ -160,9 +179,13 @@ npm start
 ```
 
 #### 6. Ver los chistes almacenados
+
 **Endpoint:** `GET /jokes`  
+
 **Descripción:** Devuelve los chistes almacenados en la base de datos
+
 **Respuesta exitosa (200):**
+
 ```json
 {
   "success": true,
@@ -180,9 +203,12 @@ npm start
 
 #### 7. Combinar chiste
 
-**Endpoint:** `GET /jokes/combined`  
+**Endpoint:** `GET /jokes/combined`
+
 **Descripción:** Obtiene 5 pares de chistes combinados (Chuck Norris + Dad Joke)
+
 **Respuesta exitosa (200):**
+
 ```json
 {
   "success": true,
