@@ -45,4 +45,9 @@ export class JokeController {
 		const serviceResponse = await this.jokeService.deleteJoke(id);
 		res.status(serviceResponse.statusCode).send(serviceResponse);
 	};
+
+	public getCombinedJokes: RequestHandler = async (_req: Request, res: Response) => {
+		const serviceResponse = await this.jokeService.getCombinedJokes();
+		res.status(serviceResponse.statusCode).send(serviceResponse);
+	};
 }

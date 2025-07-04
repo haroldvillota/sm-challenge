@@ -21,6 +21,8 @@ const envSchema = z.object({
 	DB_NAME: z.string().min(1).default("myLocalDb"),
 	DB_PASSWORD: z.string().min(1).default("myLocalPassword"),
 	DB_PORT: z.coerce.number().int().positive().default(5432),
+
+	OPENAI_API_KEY: z.string().min(1),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);

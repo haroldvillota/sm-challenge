@@ -14,6 +14,7 @@ import { env } from "@/common/utils/envConfig";
 import { ChuckFetchRepository } from "@/infrastructure/database/http/chuckFetchRepository";
 import { DadFetchRepository } from "@/infrastructure/database/http/dadFetchRepository";
 import { PostgresJokeRepository } from "@/infrastructure/database/postgres/postgresJokeRepository";
+import { OpenAIService } from "@/infrastructure/llm/openai";
 import { JokeController } from "@/infrastructure/api/joke/jokeController";
 import { pool } from "@/infrastructure/database/postgres";
 import { JokeService } from "@/application/services/jokeService";
@@ -31,8 +32,9 @@ app.set("trust proxy", true);
 const postgresRepository = new PostgresJokeRepository(pool);
 const chuckFetchRepository = new ChuckFetchRepository();
 const dadFetchRepository = new DadFetchRepository();
+const openAIService = new OpenAIService(env.OPENAI_API_KEY);
 
-const jokeService = new JokeService(postgresRepository, chuckFetchRepository, dadFetchRepository);
+const jokeService = new JokeService(postgresRepository, chuckFetchRepository, dadFetchRepository, openAIService);
 const jokeController = new JokeController(jokeService);
 
 const mathService = new MathService();

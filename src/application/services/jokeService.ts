@@ -2,6 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import { Joke } from "@/domain/entities/jokeEntity";
 import type { JokeFetchRepository } from "@/domain/repositories/jokeFetchRepositoryInterface";
 import type { JokeRepository } from "@/domain/repositories/jokeRepositoryInterface";
+import type { LLMService } from "@/domain/repositories/llmRepositoryInterface";
 import { ServiceResponse } from "@/common/models/serviceResponse";
 import { logger } from "@/server";
 type JokeSource = "chuck" | "dad";
@@ -11,6 +12,7 @@ export class JokeService {
 		private jokeRepository: JokeRepository,
 		private chuckRepository: JokeFetchRepository,
 		private dadRepository: JokeFetchRepository,
+		private llmService: LLMService,
 	) {}
 
 	// Retrieves a single random joke
@@ -95,5 +97,69 @@ export class JokeService {
 				StatusCodes.INTERNAL_SERVER_ERROR,
 			);
 		}
+	}
+
+	async getCombinedJokes(): Promise<ServiceResponse<Array<{ chuck: string; dad: string; combined: string }>>> {
+		try {
+			const qty = 5;
+
+			const [chuckPromises, dadPromises] = [
+				Array(qty)
+					.fill(null)
+					.map(() => this.chuckRepository.fetchRandom()),
+				Array(qty)
+					.fill(null)
+					.map(() => this.dadRepository.fetchRandom()),
+			];
+
+			// Wait for all request
+			const [chuckResults, dadResults] = await Promise.all([Promise.all(chuckPromises), Promise.all(dadPromises)]);
+
+			// Validation
+			if (chuckResults.length !== qty || dadResults.length !== qty) {
+				throw new Error("Could not get all the jokes needed");
+			}
+
+			const combinedPromises = chuckResults.map((chuckJoke, index) => {
+				const dadJoke = dadResults[index];
+				return this.combineJokePair(chuckJoke.value, dadJoke.value);
+			});
+
+			const combinedResults = await Promise.all(combinedPromises);
+
+			return ServiceResponse.success("Combined jokes retrieved successfully", combinedResults);
+		} catch (ex) {
+			const errorMessage = `Error combining jokes: ${(ex as Error).message}`;
+			logger.error(errorMessage);
+			return ServiceResponse.failure("An error occurred while combining jokes", [], StatusCodes.INTERNAL_SERVER_ERROR);
+		}
+	}
+
+	private async combineJokePair(
+		chuckJoke: string,
+		dadJoke: string,
+	): Promise<{ chuck: string; dad: string; combined: string }> {
+		try {
+			// Aquí implementarías la llamada al LLM
+			const combined = await this.llmService.combineJokes(chuckJoke, dadJoke);
+
+			return {
+				chuck: chuckJoke,
+				dad: dadJoke,
+				combined: combined || this.defaultCombine(chuckJoke, dadJoke),
+			};
+		} catch (error) {
+			logger.error(`Error combining jokes with LLM: ${error}`);
+			return {
+				chuck: chuckJoke,
+				dad: dadJoke,
+				combined: this.defaultCombine(chuckJoke, dadJoke),
+			};
+		}
+	}
+
+	private defaultCombine(chuckJoke: string, dadJoke: string): string {
+		// Fallback si el LLM falla
+		return `${chuckJoke} Also, ${dadJoke.toLowerCase()}`;
 	}
 }

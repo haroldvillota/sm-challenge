@@ -11,6 +11,8 @@ Obtiene chistes aleatorios de:
 
 CRUD completo para gestión de chistes locales
 
+Hace 5 combinacines de chistes de chuck y dad
+
 ## Modulo matemático
 
 Esta API proporciona servicios matemáticos básicos a través de endpoints RESTful. Actualmente incluye funcionalidades para:
@@ -148,6 +150,26 @@ npm start
 }
 ```
 
+#### 6. Combinar chiste
+
+**Endpoint:** `GET /jokes/combined`  
+**Descripción:** Obtiene 5 pares de chistes combinados (Chuck Norris + Dad Joke)
+**Respuesta exitosa (200):**
+```json
+{
+  "success": true,
+  "message": "Combined jokes retrieved successfully",
+  "data": [
+    {
+      "chuck": "Chuck Norris can divide by zero.",
+      "dad": "Why don't scientists trust atoms? Because they make up everything.",
+      "combined": "Chuck Norris can divide by zero, just like atoms make up everything in science."
+    },
+    ...
+  ]
+}
+```
+
 ### Módulo de matemáticas (`/math`)
 
 #### 1. Cálculo de MCM
@@ -220,6 +242,11 @@ curl -X PUT "http://localhost:8080/joke?number=123&value=Nuevo%20texto%20del%20c
 ### Eliminar chiste
 ```bash
 curl -X DELETE "http://localhost:8080/joke?number=123"
+```
+
+### Obtener combinaciones de chistes
+```bash
+curl -X GET http://localhost:8080/jokes/combined
 ```
 
 ### Calcular Máximo común múltiplo
@@ -314,4 +341,9 @@ La documentación OpenAPI/Swagger está disponible en `/api-docs` cuando el serv
 - `DB_PORT`: Puerto de la base de datos
   ```env
   DB_PORT="5432"
+  ```
+
+- `OPENAI_API_KEY`: Key de OpenApi
+  ```env
+  OPENAI_API_KEY="myOpenApiKey"
   ```

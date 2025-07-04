@@ -20,6 +20,7 @@ export function jokesRouter(controller: JokeController) {
 	const router: Router = express.Router();
 
 	router.get("/", controller.getJokes);
+	router.get("/combined", controller.getCombinedJokes);
 
 	return router;
 }
