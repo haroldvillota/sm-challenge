@@ -1,6 +1,6 @@
-import type { EmbeddingGenerator } from "@/domain/repositories/embeddingInterface";
-import type { TextSplitter } from "@/domain/repositories/textSplitterInterface";
-import type { MeetingParser } from "@/domain/repositories/meetingParserInterface";
+import type { EmbeddingGenerator } from "@/domain/interfaces/embeddingInterface";
+import type { TextSplitter } from "@/domain/interfaces/textSplitterInterface";
+import type { MeetingParser } from "@/domain/interfaces/meetingParserInterface";
 import type { MeetingRecord, Chunk } from "@/domain/models/meetingRecordModel";
 import type { LoggerInterface } from "@/common/interfaces/loggerInterface";
 

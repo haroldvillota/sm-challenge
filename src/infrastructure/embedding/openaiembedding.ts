@@ -1,4 +1,4 @@
-import type { EmbeddingGenerator } from "@/domain/repositories/embeddingInterface";
+import type { EmbeddingGenerator } from "@/domain/interfaces/embeddingInterface";
 import { OpenAI } from "openai";
 
 export class OpenAIEmbeddings implements EmbeddingGenerator {
