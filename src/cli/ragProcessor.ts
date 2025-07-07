@@ -42,6 +42,7 @@ async function main() {
 
 		const ragService = new RAGService(chromaVectorRespository, embeddingGenerator, openAIMeetingQuery, logger);
 
+		await chromaVectorRespository.clearCollection();
 		const response = await ragService.query(query);
 
 		console.log(response);

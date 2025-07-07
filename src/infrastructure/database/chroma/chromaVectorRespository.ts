@@ -38,6 +38,10 @@ export class ChromaVectorRepository implements VectorRepository {
 		});
 	}
 
+	async clearCollection(): Promise<void> {
+		await this.client.deleteCollection({ name: this.collectionName });
+	}
+
 	async findSimilarChunks(embedding: number[], topK = 3): Promise<Chunk[]> {
 		const collection = await this.client.getCollection({
 			name: this.collectionName,

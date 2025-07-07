@@ -69,5 +69,6 @@ npm run process-pdf ActaJuntaVecinos2024Short.pdf
 El pipeline RAG se ejecuta desde línea de comandos con, ejemplo:
 
 ```bash
-npm run query "que se acordo con la piscina?"
+npm run query "Que se acordo con la piscina?"
+npm run query "¿Se habló del coste eléctrico?"
 ```
