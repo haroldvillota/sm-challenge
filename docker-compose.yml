@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chroma-data:/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_HTTP_PORT=8000
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: myLocalUser
+      POSTGRES_PASSWORD: myLocalPassword
+      POSTGRES_DB: myLocalDb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - intranet
+
+networks:
+  intranet:
+    external: true
+
+volumes:
+  postgres_data:

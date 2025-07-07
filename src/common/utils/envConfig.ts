@@ -23,6 +23,9 @@ const envSchema = z.object({
 	DB_PORT: z.coerce.number().int().positive().default(5432),
 
 	OPENAI_API_KEY: z.string().min(1),
+
+	CHROMA_DB_HOST: z.string().min(1).default("localhost"),
+	CHROMA_DB_PORT: z.coerce.number().int().positive().default(8000),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);
