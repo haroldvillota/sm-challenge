@@ -10,7 +10,7 @@ import { TransformService } from "@/application/services/meetingRecords/transfor
 import { LoadService } from "@/application/services/meetingRecords/loadService";
 
 import { OpenAIEmbeddings } from "@/infrastructure/embedding/openaiembedding";
-import { OpenAIMeetingParser } from "@/infrastructure/meetingParser/openAiMeetingParser";
+import { OpenAIMeetingParser } from "@/infrastructure/llm/openAiMeetingParser";
 import { SemanticTextSplitter } from "@/infrastructure/textSplitter/semanticTextSplitter";
 import { ChromaVectorRepository } from "@/infrastructure/database/chroma/chromaVectorRespository";
 import { env } from "@/common/utils/envConfig";

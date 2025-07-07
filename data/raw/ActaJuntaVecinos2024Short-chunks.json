@@ -1,106 +1,70 @@
 [
-  {
-    "id": "ActaJuntaVecinos2024Short-intro-0",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "introduction",
-    "content": "",
-    "metadata": {
-      "keywords": []
-    }
-  },
-  {
-    "id": "ActaJuntaVecinos2024Short-intro-1",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "introduction",
-    "content": "En Madrid) y siendo las 19,00 horas del día veintinueve de mayo de dos mil veinticuatro, y en el local \nsocial de la Comunidad, debidamente convocados, se reúnen en segunda convocatoria los \ncopropietarios, presentes o representados, que posteriormente se relacionan, actuando como \nsecretario Don Benemerito Pepe Gotera (ACME asociados) y con la asistencia de la Presidenta de la \nComunidad Doña Carpanta Gonzalez, a fin de celebrar la Junta General Ordinaria de la Comunidad \nde Propietarios “Residencial PERCEBES” calle Rue del Percebe 2 de Madrid, conforme al Orden del \n día:",
-    "metadata": {
-      "keywords": [
-        "madrid",
-        "siendo",
-        "horas",
-        "veintinueve",
-        "mayo"
-      ]
-    }
-  },
-  {
-    "id": "ActaJuntaVecinos2024Short-clause-0-0",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "clause",
-    "clauseId": "clause-0",
-    "content": "Aprobación de las cuentas del ejercicio 2023: Toma la palabra el administrador para explicar las cuentas que se ha enviado con anterioridad a los \npropietarios. En el ejercicio 2023 se han generado unos ingresos anuales de 743.920,61 euros de los \ncuales 475.480,74 corresponden a cuotas ordinarias, 266.250,42 a derramas y el resto corresponde a \nintereses y costas por la reclamación judicial de las cuotas pendientes del portal B, 3º B que ya ha \nregularizado su deuda porque ha vendido el piso. \nEn relación a los gastos, se han llAslydo a cabo unos gastos de 648.738,46 euros de los que cabe \ndestacar como ordinarios: \n- Servicio de conserjería 128.386,81 euros \n- Limpieza 54.209,98 euros \n- Mantenimiento de la finca 34.116,49 euros \n- Mantenimiento PCI 22.505,40 de los que quedan por pagar 15.161,81 euros ya \nque se paga a plazos y se refiere a una actuación que se realizó en enero de 2022 y se \ntermina de pagar en 2026. \n- Conservación de ascensores 17.445,71 euros. \n- Consumo de agua 12.390,58 que incluye riego, agua piscina, cuartos de basuras \ny garajes \n- Consumo de electricidad: 84.933,71. Se ha procedido al cambio de comercializadora y de \ntarifas en el último trimestre de 2023 lo cual ha supuesto un ahorro de 2.510,23 euros al \nmes desde noviembre 2023. \nTambién comenta que se ha tenido especial dificultad para identificar los contratos con \nsus usos ya que con las anteriores comercializadoras (Naturgy, Plenitude no facilitaban \nmuchos datos), pero en la actualidad ya están identificados. De hecho, en las cuentas se \npuede observar que a partir de octubre ya están especificados los gastos de electricidad \npor usos, que es lo normal. \nEn cuanto a actuaciones extraordinarias, se ha realizado la reparación en armario contador de la calle \narroyo del pescador que un domingo empezó a perder gran cantidad de agua, la sustitución de rejillas \nde imbornales, varias reparaciones de fontanería por pérdidas de agua en tuberías que estaban \npicadas. Una de ellas en grupo ",
-    "metadata": {
-      "keywords": [
-        "aprobación",
-        "cuentas",
-        "ejercicio",
-        "2023",
-        "toma"
-      ]
-    }
-  },
-  {
-    "id": "ActaJuntaVecinos2024Short-clause-0-1",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "clause",
-    "clauseId": "clause-0",
-    "content": "Aprobación de las cuentas del ejercicio 2023: de presión, reparaciones de electricidad en farolas y tiros de escaleras, en pocería: limpieza de \nconducciones, cerrajería: 5.288,73 euros, la impermeabilización de azoteas por 17.937,04 y que aún \nno ha finalizado, impermeabilización del muro del recinto de la piscina por 1.210,00, la \nimpermeabilización de la pista deportiva por 69.035,39, sustitución de tubería de riego del bloque A \npor 15.249,85 y la instalación de focos led en la entrada de los portales. \nTras la explicación se somete a votación y se acuerda por unanimidad la aprobación de las cuentas.",
-    "metadata": {
-      "keywords": [
-        "aprobación",
-        "cuentas",
-        "ejercicio",
-        "2023",
-        "presión"
-      ]
-    }
-  },
-  {
-    "id": "ActaJuntaVecinos2024Short-clause-1-0",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "clause",
-    "clauseId": "clause-1",
-    "content": "Aprobación del presupuesto para el 2024: Tras una exhaustiva revisión de los gastos del 2023, subida del IPC de los servicios contratados y la \nbajada de la factura de electricidad se propone mantener las cuotas del 2023. \nUn vecino agradece esta medida ya que ha habido subidas durante los dos últimos años. Se procede a \nla votación del presupuesto y quedan aprobadas por unanimidad.",
-    "metadata": {
-      "keywords": [
-        "aprobación",
-        "presupuesto",
-        "2024",
-        "tras",
-        "exhaustiva"
-      ]
-    }
-  },
-  {
-    "id": "ActaJuntaVecinos2024Short-clause-2-0",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "clause",
-    "clauseId": "clause-2",
-    "content": "Renovación de cargos y método de elección: En primer lugar, se aborda el método de elección para los cargos de presidente y vicepresidente. Se \nrecuerda que está establecido en la Junta Ordinaria del 2022 que primero se realizase un sorteo para \nla elección de los vocales. En los siguientes años pasaría a ser vocal el siguiente en orden \nascendente. El cargo de presidente y vicepresidente tocaría a los vocales que les tocase por turno \nascendente de los dos portales siguientes al A y B, es decir, ahora tocaría el C para presidente y D \npara vicepresidente. Se propone que se exima del cargo a los que no viven en la urbanización y si ya \nle ha tocado por ser voluntario anteriormente sea el siguiente por turno ascendente. Se somete a \nvotación y se acuerda por unanimidad estas dos propuestas. \nSiguiendo el turno establecido por orden ascendente en cada portal, salen \nelegidos: Portal C: Maria Jesús Montero (1º A) Presidenta. \nPortal D: Chusa Garcia (4º A) Vicepresidenta. \nEn relación a los vocales, salen elegidos por el sistema de turno rotatorio aprobado los \nsiguientes: Portal A: Manolo del Bombo 4º C \nPortal B: Rosita Torrija. 2º A \nPortal E: Ruperto de Lopez \n(2º A) \nPortal F: Maria García (3º C) Portal G: \nJulita Smith (3º B) Portal H: Agatha \nChumbo Agatha (6º B) Portal I: \nJuliano Cantinflas (6º B) \nPortal J: Arabella Torcuato (5º A) \nPortal K: Antoñito Facundo (3º B) \nPortal L: Ruperto Isaac Garcia (7º B) \nPortal M: María Chunda Tumba (5º A) Portal \nN: Heradio Sanchez (3º A) \nPortal O: Floria Carriona (ático B) \nPortal P: Lolo Heladino Kas (4º A) \nPortal Q: Benemerito Tesifonte Garcia (2º A) \nPortal R: Aracelia Sanchez Mar (3º B)",
-    "metadata": {
-      "keywords": [
-        "renovación",
-        "cargos",
-        "método",
-        "elección",
-        "primer"
-      ]
-    }
-  },
-  {
-    "id": "ActaJuntaVecinos2024Short-clause-3-0",
-    "meetingRecordId": "ActaJuntaVecinos2024Short",
-    "chunkType": "clause",
-    "clauseId": "clause-3",
-    "content": "Liquidación de la deuda de propietarios morosos. Certificación y autorización al presidente para el nombramiento de abogado y procurador para la reclamación de los recibos impagados: Se traslada a los vecinos que la deuda a día de hoy es de 25.486,99 euros ya que ha habido \npropietarios que han regularizado su situación en los primeros meses del presente año. Informa el \nadministrador a los presentes que",
-    "metadata": {
-      "keywords": [
-        "liquidación",
-        "deuda",
-        "propietarios",
-        "morosos",
-        "certificación"
-      ]
-    }
-  }
+	{
+		"id": "ActaJuntaVecinos2024Short-intro-0",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "introduction",
+		"content": "",
+		"metadata": {
+			"keywords": []
+		}
+	},
+	{
+		"id": "ActaJuntaVecinos2024Short-intro-1",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "introduction",
+		"content": "En Madrid) y siendo las 19,00 horas del día veintinueve de mayo de dos mil veinticuatro, y en el local \nsocial de la Comunidad, debidamente convocados, se reúnen en segunda convocatoria los \ncopropietarios, presentes o representados, que posteriormente se relacionan, actuando como \nsecretario Don Benemerito Pepe Gotera (ACME asociados) y con la asistencia de la Presidenta de la \nComunidad Doña Carpanta Gonzalez, a fin de celebrar la Junta General Ordinaria de la Comunidad \nde Propietarios “Residencial PERCEBES” calle Rue del Percebe 2 de Madrid, conforme al Orden del \n día:",
+		"metadata": {
+			"keywords": ["madrid", "siendo", "horas", "veintinueve", "mayo"]
+		}
+	},
+	{
+		"id": "ActaJuntaVecinos2024Short-clause-0-0",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "clause",
+		"clauseId": "clause-0",
+		"content": "Aprobación de las cuentas del ejercicio 2023: Toma la palabra el administrador para explicar las cuentas que se ha enviado con anterioridad a los \npropietarios. En el ejercicio 2023 se han generado unos ingresos anuales de 743.920,61 euros de los \ncuales 475.480,74 corresponden a cuotas ordinarias, 266.250,42 a derramas y el resto corresponde a \nintereses y costas por la reclamación judicial de las cuotas pendientes del portal B, 3º B que ya ha \nregularizado su deuda porque ha vendido el piso. \nEn relación a los gastos, se han llAslydo a cabo unos gastos de 648.738,46 euros de los que cabe \ndestacar como ordinarios: \n- Servicio de conserjería 128.386,81 euros \n- Limpieza 54.209,98 euros \n- Mantenimiento de la finca 34.116,49 euros \n- Mantenimiento PCI 22.505,40 de los que quedan por pagar 15.161,81 euros ya \nque se paga a plazos y se refiere a una actuación que se realizó en enero de 2022 y se \ntermina de pagar en 2026. \n- Conservación de ascensores 17.445,71 euros. \n- Consumo de agua 12.390,58 que incluye riego, agua piscina, cuartos de basuras \ny garajes \n- Consumo de electricidad: 84.933,71. Se ha procedido al cambio de comercializadora y de \ntarifas en el último trimestre de 2023 lo cual ha supuesto un ahorro de 2.510,23 euros al \nmes desde noviembre 2023. \nTambién comenta que se ha tenido especial dificultad para identificar los contratos con \nsus usos ya que con las anteriores comercializadoras (Naturgy, Plenitude no facilitaban \nmuchos datos), pero en la actualidad ya están identificados. De hecho, en las cuentas se \npuede observar que a partir de octubre ya están especificados los gastos de electricidad \npor usos, que es lo normal. \nEn cuanto a actuaciones extraordinarias, se ha realizado la reparación en armario contador de la calle \narroyo del pescador que un domingo empezó a perder gran cantidad de agua, la sustitución de rejillas \nde imbornales, varias reparaciones de fontanería por pérdidas de agua en tuberías que estaban \npicadas. Una de ellas en grupo ",
+		"metadata": {
+			"keywords": ["aprobación", "cuentas", "ejercicio", "2023", "toma"]
+		}
+	},
+	{
+		"id": "ActaJuntaVecinos2024Short-clause-0-1",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "clause",
+		"clauseId": "clause-0",
+		"content": "Aprobación de las cuentas del ejercicio 2023: de presión, reparaciones de electricidad en farolas y tiros de escaleras, en pocería: limpieza de \nconducciones, cerrajería: 5.288,73 euros, la impermeabilización de azoteas por 17.937,04 y que aún \nno ha finalizado, impermeabilización del muro del recinto de la piscina por 1.210,00, la \nimpermeabilización de la pista deportiva por 69.035,39, sustitución de tubería de riego del bloque A \npor 15.249,85 y la instalación de focos led en la entrada de los portales. \nTras la explicación se somete a votación y se acuerda por unanimidad la aprobación de las cuentas.",
+		"metadata": {
+			"keywords": ["aprobación", "cuentas", "ejercicio", "2023", "presión"]
+		}
+	},
+	{
+		"id": "ActaJuntaVecinos2024Short-clause-1-0",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "clause",
+		"clauseId": "clause-1",
+		"content": "Aprobación del presupuesto para el 2024: Tras una exhaustiva revisión de los gastos del 2023, subida del IPC de los servicios contratados y la \nbajada de la factura de electricidad se propone mantener las cuotas del 2023. \nUn vecino agradece esta medida ya que ha habido subidas durante los dos últimos años. Se procede a \nla votación del presupuesto y quedan aprobadas por unanimidad.",
+		"metadata": {
+			"keywords": ["aprobación", "presupuesto", "2024", "tras", "exhaustiva"]
+		}
+	},
+	{
+		"id": "ActaJuntaVecinos2024Short-clause-2-0",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "clause",
+		"clauseId": "clause-2",
+		"content": "Renovación de cargos y método de elección: En primer lugar, se aborda el método de elección para los cargos de presidente y vicepresidente. Se \nrecuerda que está establecido en la Junta Ordinaria del 2022 que primero se realizase un sorteo para \nla elección de los vocales. En los siguientes años pasaría a ser vocal el siguiente en orden \nascendente. El cargo de presidente y vicepresidente tocaría a los vocales que les tocase por turno \nascendente de los dos portales siguientes al A y B, es decir, ahora tocaría el C para presidente y D \npara vicepresidente. Se propone que se exima del cargo a los que no viven en la urbanización y si ya \nle ha tocado por ser voluntario anteriormente sea el siguiente por turno ascendente. Se somete a \nvotación y se acuerda por unanimidad estas dos propuestas. \nSiguiendo el turno establecido por orden ascendente en cada portal, salen \nelegidos: Portal C: Maria Jesús Montero (1º A) Presidenta. \nPortal D: Chusa Garcia (4º A) Vicepresidenta. \nEn relación a los vocales, salen elegidos por el sistema de turno rotatorio aprobado los \nsiguientes: Portal A: Manolo del Bombo 4º C \nPortal B: Rosita Torrija. 2º A \nPortal E: Ruperto de Lopez \n(2º A) \nPortal F: Maria García (3º C) Portal G: \nJulita Smith (3º B) Portal H: Agatha \nChumbo Agatha (6º B) Portal I: \nJuliano Cantinflas (6º B) \nPortal J: Arabella Torcuato (5º A) \nPortal K: Antoñito Facundo (3º B) \nPortal L: Ruperto Isaac Garcia (7º B) \nPortal M: María Chunda Tumba (5º A) Portal \nN: Heradio Sanchez (3º A) \nPortal O: Floria Carriona (ático B) \nPortal P: Lolo Heladino Kas (4º A) \nPortal Q: Benemerito Tesifonte Garcia (2º A) \nPortal R: Aracelia Sanchez Mar (3º B)",
+		"metadata": {
+			"keywords": ["renovación", "cargos", "método", "elección", "primer"]
+		}
+	},
+	{
+		"id": "ActaJuntaVecinos2024Short-clause-3-0",
+		"meetingRecordId": "ActaJuntaVecinos2024Short",
+		"chunkType": "clause",
+		"clauseId": "clause-3",
+		"content": "Liquidación de la deuda de propietarios morosos. Certificación y autorización al presidente para el nombramiento de abogado y procurador para la reclamación de los recibos impagados: Se traslada a los vecinos que la deuda a día de hoy es de 25.486,99 euros ya que ha habido \npropietarios que han regularizado su situación en los primeros meses del presente año. Informa el \nadministrador a los presentes que",
+		"metadata": {
+			"keywords": ["liquidación", "deuda", "propietarios", "morosos", "certificación"]
+		}
+	}
 ]
