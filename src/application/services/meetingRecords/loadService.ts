@@ -8,7 +8,7 @@ export class LoadService {
 		private readonly logger: LoggerInterface,
 	) {}
 
-	async loadChunks(chunks: (Chunk & { embedding: number[] })[]): Promise<void> {
+	async saveChunks(chunks: (Chunk & { embedding: number[] })[]): Promise<void> {
 		try {
 			await this.vectorRepository.upsertChunks(chunks);
 		} catch (e) {

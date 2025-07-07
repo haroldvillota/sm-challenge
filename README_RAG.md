@@ -60,8 +60,14 @@ OPENAI_API_KEY=sk-...
 
 ## Ejecución
 
-El pipeline ETL se ejecuta desde línea de comandos con:
+El pipeline ETL se ejecuta desde línea de comandos, ejemplo:
 
 ```bash
 npm run process-pdf ActaJuntaVecinos2024Short.pdf
+```
+
+El pipeline RAG se ejecuta desde línea de comandos con, ejemplo:
+
+```bash
+npm run query "que se acordo con la piscina?"
 ```

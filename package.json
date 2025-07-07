@@ -14,7 +14,8 @@
 		"test": "vitest run",
 		"test:cov": "vitest run --coverage",
 		"check": "pnpm lint && pnpm format && pnpm build && pnpm test",
-		"process-pdf": "tsx src/cli/etlProcessor.ts"
+		"process-pdf": "tsx src/cli/etlProcessor.ts",
+		"query": "tsx src/cli/ragProcessor.ts"
 	},
 	"dependencies": {
 		"@asteasolutions/zod-to-openapi": "7.3.4",

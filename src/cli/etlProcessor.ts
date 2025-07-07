@@ -19,7 +19,7 @@ function getLogFileName() {
 	const now = new Date();
 	const date = now.toISOString().split("T")[0]; // YYYY-MM-DD
 	const time = now.toTimeString().split(" ")[0].replace(/:/g, "-"); // HH-MM-SS
-	return `logs_${date}_${time}.json`;
+	return `logs_etl_${date}_${time}.json`;
 }
 
 const logsDir = path.resolve(__dirname, "../../logs");
@@ -100,7 +100,7 @@ async function main() {
 			fs.writeFileSync(absolutePathEmbeddings, JSON.stringify(embeddings, null, 2), "utf-8");
 		}
 
-		await chromaVectorRespository.upsertChunks(embeddings);
+		await loadService.saveChunks(embeddings);
 
 		logger.info("Success!");
 	} catch (e) {

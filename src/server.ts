@@ -14,7 +14,7 @@ import { env } from "@/common/utils/envConfig";
 import { ChuckFetchRepository } from "@/infrastructure/database/http/chuckFetchRepository";
 import { DadFetchRepository } from "@/infrastructure/database/http/dadFetchRepository";
 import { PostgresJokeRepository } from "@/infrastructure/database/postgres/postgresJokeRepository";
-import { OpenAIService } from "@/infrastructure/llm/openai";
+import { OpenAIService } from "@/infrastructure/llm/openaiJokes";
 import { JokeController } from "@/infrastructure/api/joke/jokeController";
 import { pool } from "@/infrastructure/database/postgres";
 import { JokeService } from "@/application/services/jokeService";

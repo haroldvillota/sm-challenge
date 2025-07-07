@@ -39,7 +39,10 @@ export class ChromaVectorRepository implements VectorRepository {
 	}
 
 	async findSimilarChunks(embedding: number[], topK = 3): Promise<Chunk[]> {
-		const collection = await this.client.getCollection({ name: this.collectionName });
+		const collection = await this.client.getCollection({
+			name: this.collectionName,
+			embeddingFunction: undefined,
+		});
 		const results = await collection.query({
 			queryEmbeddings: [embedding],
 			nResults: topK,
