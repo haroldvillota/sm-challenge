@@ -64,6 +64,7 @@ El pipeline ETL se ejecuta desde línea de comandos, ejemplo:
 
 ```bash
 npm run process-pdf ActaJuntaVecinos2024Short.pdf
+npm run process-pdf ActaJuntaVecinos2024.pdf
 ```
 
 El pipeline RAG se ejecuta desde línea de comandos con, ejemplo:
