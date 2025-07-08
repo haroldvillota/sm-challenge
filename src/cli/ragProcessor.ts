@@ -25,7 +25,7 @@ if (!fs.existsSync(logsDir)) {
 const logFilePath = path.join(logsDir, getLogFileName());
 const logStream = fs.createWriteStream(logFilePath, { flags: "a" });
 
-const logger = pino({ name: "etl begin", level: "debug" }, logStream);
+const logger = pino({ name: "rag begin", level: "debug" }, logStream);
 
 async function main() {
 	const [, , query] = process.argv;
@@ -42,7 +42,6 @@ async function main() {
 
 		const ragService = new RAGService(chromaVectorRespository, embeddingGenerator, openAIMeetingQuery, logger);
 
-		await chromaVectorRespository.clearCollection();
 		const response = await ragService.query(query);
 
 		console.log(response);

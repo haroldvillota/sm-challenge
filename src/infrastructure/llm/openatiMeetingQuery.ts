@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import type { LLMMeetingQuery } from "@/domain/interfaces/llmmeetingQueryInterface";
+import type { LLMMeetingQuery } from "@/domain/interfaces/llmMeetingQueryInterface";
 import { buildQueryPrompt } from "@/infrastructure/llm/prompts/meetingQueryPrompt";
 
 export class OpenAIMeetingQuery implements LLMMeetingQuery {

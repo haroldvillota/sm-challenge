@@ -100,12 +100,19 @@ async function main() {
 			fs.writeFileSync(absolutePathEmbeddings, JSON.stringify(embeddings, null, 2), "utf-8");
 		}
 
+		// FOR DEVELOPMENT
+		try {
+			await chromaVectorRespository.clearCollection();
+		} catch (e) { 
+			console.error("Error in clearCollection:", e);
+		}
+
 		await loadService.saveChunks(embeddings);
 
 		logger.info("Success!");
 	} catch (e) {
 		const errorMessage = `Error in etl pipeline: ${(e as Error).message}`;
-		logger.error("Error:", e);
+		logger.error("Error:", errorMessage);
 		console.error("Error:", errorMessage);
 		process.exit(1);
 	}

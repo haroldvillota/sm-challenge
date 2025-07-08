@@ -12,7 +12,7 @@ export class LoadService {
 		try {
 			await this.vectorRepository.upsertChunks(chunks);
 		} catch (e) {
-			const errorMessage = `Error processing PDF: ${(e as Error).message}`;
+			const errorMessage = `Error in saveChunks: ${(e as Error).message}`;
 			this.logger.error(errorMessage);
 			throw new Error(errorMessage);
 		}

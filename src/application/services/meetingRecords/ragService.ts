@@ -2,8 +2,7 @@ import type { VectorRepository } from "@/domain/repositories/vectorRepositoryInt
 import type { Chunk } from "@/domain/models/meetingRecordModel";
 import type { LoggerInterface } from "@/common/interfaces/loggerInterface";
 import type { EmbeddingGenerator } from "@/domain/interfaces/embeddingInterface";
-
-import type { LLMMeetingQuery } from "@/domain/interfaces/llmmeetingQueryInterface";
+import type { LLMMeetingQuery } from "@/domain/interfaces/llmMeetingQueryInterface";
 
 export class RAGService {
 	constructor(
